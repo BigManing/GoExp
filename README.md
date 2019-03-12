@@ -1,3 +1,6 @@
 # GoExp
 record things  what  make me confusion
-### slice
+## others
+-  [append](./slice/append.go)
+## algorithm
+-  [quickSort](./algorithm/alg.go)

@@ -48,7 +48,6 @@ func quickSort_normal(datas []int, begin int, end int) {
 }
 
 //	思路  使用两个slice   小的  大的    最后 在组合起来
-// 缺点   使用的空间比较大
 func quickSort_goroutine(datas []int) []int {
 	// 条件判断
 	if len(datas) < 1 {
