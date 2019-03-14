@@ -4,9 +4,9 @@ import (
 	"fmt"
 )
 
-// slice  是一个拥有长度
+// slice  是一个拥有长度 cap 数组
 func main() {
-	//    getLenCap()
+	getLenCap()
 
 }
 

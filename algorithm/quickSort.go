@@ -1,19 +1,8 @@
-package main
+package algorithm
 
 import (
-	"fmt"
 	"sync"
 )
-
-func main() {
-	ints := []int{43, 6, 22, 447, 2, 888, 23, 466, 97}
-
-	fmt.Println(ints)
-	quickSort_normal(ints, 0, len(ints)-1)
-	//ints = quickSort_goroutine(ints)
-
-	fmt.Println(ints)
-}
 
 //  一般 快速排序
 // 在原有的数组的基础上  进行排序
