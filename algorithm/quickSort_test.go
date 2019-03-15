@@ -6,16 +6,6 @@ import (
 )
 
 // 普通 快速排序
-func TestString(t *testing.T) {
-	line()
-
-	strs := "abcdddcccc"
-	maxLen, str := getLongestString(strs)
-	fmt.Println(maxLen, str)
-
-}
-
-// 普通 快速排序
 func TestQickSortNormal(t *testing.T) {
 	line()
 
