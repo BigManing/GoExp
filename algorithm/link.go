@@ -1,5 +1,6 @@
 package algorithm
 
+//https://blog.csdn.net/insist100/article/details/80357669
 // 链表  结构体
 type LinkNode struct {
 	Name string
@@ -23,5 +24,16 @@ func deleteRepeatDataInLink(node *LinkNode) {
 			current = current.Next
 		}
 	}
-	println(node)
+}
+
+// 删除 链表
+// 定义当前 标识  把当前实体置空  把current= 下个
+func DeleteLink(node **LinkNode) {
+	// 记录当前node
+	current := node
+	for *current != nil {
+		tmp := *current
+		*current = nil
+		*current = tmp.Next
+	}
 }
