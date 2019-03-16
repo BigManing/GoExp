@@ -1,6 +1,8 @@
 package algorithm
 
-import "strings"
+import (
+	"strings"
+)
 
 // 字符串中   最长的无重复  子串
 
@@ -32,4 +34,35 @@ func checkRangeStr(tmpStr string) bool {
 		}
 	}
 	return true
+}
+
+//输出字符串中第一个只出现一次的字符，用两种方案。
+func getSingleCharFromStr1(str string) string {
+	//	思路1  遍历str  存入map   保存出现的次数
+	//再次遍历  查找第一个出现一次的 char
+	keyMap := make(map[string]int)
+	for _, v := range str {
+		keyMap[string(v)] += 1
+	}
+
+	for _, v := range str {
+		if keyMap[string(v)] == 1 {
+			return string(v)
+		}
+	}
+	return ""
+}
+
+//输出字符串中第一个只出现一次的字符，用两种方案。
+func getSingleCharFromStr2(str string) string {
+	//	思路2  遍历str
+	for _, v := range str {
+		//if  i == strings.LastIndexAny(str, string(v)) {  // 这个操作是错误的    会返回 g
+
+		//  如果  字符第一次出现的索引 == 最后一次出现的索引
+		if strings.Index(str, string(v)) == strings.LastIndexAny(str, string(v)) {
+			return string(v)
+		}
+	}
+	return ""
 }
